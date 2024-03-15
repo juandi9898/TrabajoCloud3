@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <title>Todo Firebase</title>
+</head>
+
+<body>
+  <div id="app">
+    <button id="button-login">Login with Google</button>
+    <button id="button-logout" class="hidden">Logout</button>
+    <form id="todo-form" class="hidden">
+      <div id="user-info"></div>
+      <input id="todo-input" type="text" placeholder="Nuevo Todo" autocomplete="off" />
+    </form>
+
+    <div id="todos-container"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script type="module">
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+
+apiKey: "AIzaSyBrpWomNG7nYS6ZLQt9B5ZSh4DOhi09zlo",
+
+authDomain: "agenda-d2322.firebaseapp.com",
+
+projectId: "agenda-d2322",
+
+storageBucket: "agenda-d2322.appspot.com",
+
+messagingSenderId: "564494023197",
+
+appId: "1:564494023197:web:a9b147f2c18319fb8b64f4"
+
+};
+
+
+    // Inicializa Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Ahora 'firebase' contiene todos los módulos que importaste
+    console.log(firebase);
+  </script>
+
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>
